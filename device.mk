@@ -32,6 +32,10 @@ PRODUCT_PACKAGES += \
 # Dolby Support
 TARGET_USES_MIUI_DOLBY := true
 
+# Dolby Config File
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/dolby/config/dax-default.xml:$(TARGET_COPY_OUT_VENDOR)/etc/dolby/dax-default.xml
+
 # Miuicamera
 $(call inherit-product-if-exists, vendor/xiaomi/camera/products/miuicamera.mk)
 
