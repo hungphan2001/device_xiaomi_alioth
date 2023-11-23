@@ -8,17 +8,23 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common DerpFest stuff.
-$(call inherit-product, vendor/derp/config/common_full_phone.mk)
+# Inherit some common Cherish stuff.
+$(call inherit-product, vendor/cherish/config/common_full_phone.mk)
 
-#Derp Stuffs
+#Cherish Stuffs
 USE_LEGACY_BOOTANIMATION := true
-DERP_BUILDTYPE := Official
+CHERISH_BUILD_TYPE := Official
+
+# Cherish props
+CHERISH_MAINTAINER := hungphan2001
+CHERISH_CHIPSET := SM8250
+CHERISH_BATTERY := 4500mAh
+CHERISH_DISPLAY := 1080x2400
 
 # Inherit from alioth device
 $(call inherit-product, device/xiaomi/alioth/device.mk)
 
-PRODUCT_NAME := derp_alioth
+PRODUCT_NAME := cherish_alioth
 PRODUCT_DEVICE := alioth
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := POCO
