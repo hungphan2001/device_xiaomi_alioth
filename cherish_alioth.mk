@@ -14,7 +14,7 @@ $(call inherit-product, vendor/cherish/config/common_full_phone.mk)
 #Cherish Stuffs
 USE_LEGACY_BOOTANIMATION := true
 CHERISH_BUILD_TYPE := Official
-
+WITH_GMS := true
 # Cherish props
 CHERISH_MAINTAINER := hungphan2001
 CHERISH_CHIPSET := SM8250
